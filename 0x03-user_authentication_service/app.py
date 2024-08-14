@@ -2,8 +2,10 @@
 """ Flask class
 """
 
-from auth import Auth
 from flask import Flask, jsonify, request, abort, redirect
+from auth import Auth
+
+
 
 AUTH = Auth()
 app = Flask(__name__)
