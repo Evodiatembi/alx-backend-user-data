@@ -8,6 +8,7 @@ PASSWD = "b4l0u"
 NEW_PASSWD = "t4rt1fl3tt3"
 BASE_URL = "http://0.0.0.0:5000"
 
+
 def register_user(email: str, password: str) -> None:
     """Tests registering a user.
     """
@@ -107,7 +108,6 @@ def update_password(email: str, reset_token: str, new_password: str) -> None:
     res = requests.put(url, data=body)
     assert res.status_code == 200
     assert res.json() == {"email": email, "message": "Password updated"}
-
 
 
 EMAIL = "guillaume@holberton.io"
