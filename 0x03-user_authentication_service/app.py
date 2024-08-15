@@ -5,8 +5,6 @@
 from flask import Flask, jsonify, request, abort, redirect
 from auth import Auth
 
-
-
 AUTH = Auth()
 app = Flask(__name__)
 
@@ -18,6 +16,7 @@ def welcome() -> str:
       - welcome
     """
     return jsonify({"message": "Bienvenue"}), 200
+
 
 @app.route('/users', methods=['POST'], strict_slashes=False)
 def user() -> str:
