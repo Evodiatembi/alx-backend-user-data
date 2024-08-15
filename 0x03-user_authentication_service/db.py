@@ -42,6 +42,7 @@ class DB:
         self._session.add(new_user)
         self._session.commit()
         return new_user
+
     def find_user_by(self, **kwargs) -> User:
         """ find user
 
@@ -55,6 +56,7 @@ class DB:
         if not user:
             raise NoResultFound
         return user
+
     def update_user(self, user_id: int, **kwargs) -> None:
         """
         updating a user in the database
@@ -67,4 +69,3 @@ class DB:
 
         self._session.commit()
         return None
-
